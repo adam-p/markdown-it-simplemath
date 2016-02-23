@@ -29,3 +29,9 @@ var mathRenderer = function(mathStr) {
 md.use(require('markdown-it-simplemath'), {inlineRenderer: mathRenderer});
 console.log(md.render('$x \over y$'));
 ```
+
+## Options
+
+- **inlineRenderer** - a function that is passed math code and renders the maths to a string [Required]
+- **inlineOpen** - specify the opening characters of a math section [Optional, default `$`]
+- **inlineOpen** - specify the closing characters of a math section [Optional, default `$`]
