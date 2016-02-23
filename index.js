@@ -126,8 +126,8 @@ function makeMath_inline(open, close) {
 }
 
 module.exports = function math_plugin(md, options) {
-  var inlineOpen = '$',
-      inlineClose = '$';
+  var inlineOpen = options.inlineOpen || '$',
+      inlineClose = options.inlineClose || '$';
   if (!options || !options.inlineRenderer) {
     throw new Error('options.inlineRender is required');
   }
